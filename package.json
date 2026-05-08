@@ -1,0 +1,29 @@
+{
+  "name": "property-api-node",
+  "version": "1.0.0",
+  "description": "REST API for property management in Node.js + Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sajini-t/property-api-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest-api",
+    "property",
+    "crud"
+  ],
+  "author": "Sajini Thiagaraj sajini_t@hotmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sajini-t/property-api-node/issues"
+  },
+  "homepage": "https://github.com/sajini-t/property-api-node#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
