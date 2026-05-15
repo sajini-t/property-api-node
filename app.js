@@ -32,7 +32,7 @@ app.get('/properties/:id', (req, res) => {
 
 app.post('/properties', (req, res) => {
     if (!req.body.title || !req.body.city){
-        res.status(400).json({error: "Title and City are Required"});
+        return res.status(400).json({error: "Title and City are Required"});
     }
 
     const newProperty = {
