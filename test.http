@@ -1,0 +1,30 @@
+### Test
+GET http://localhost:3000/
+
+### Test: List all properties (should return empty array)
+GET http://localhost:3000/properties
+
+### Test: Get property by id (will be 404 since empty)
+GET http://localhost:3000/properties/2
+
+### Create property #2
+POST http://localhost:3000/properties
+Content-Type: application/json
+
+{
+  "title": "Lakeside Cottage",
+  "city": "Austin",
+  "monthly_rent": 2200,
+  "bedrooms": 3
+}
+
+### Create property #3
+POST http://localhost:3000/properties
+Content-Type: application/json
+
+{
+  "title": "Downtown Loft",
+  "city": "Dallas",
+  "monthly_rent": 1800,
+  "bedrooms": 1
+}
