@@ -5,7 +5,7 @@ GET http://localhost:3000/
 GET http://localhost:3000/properties
 
 ### Test: Get property by id (will be 404 since empty)
-GET http://localhost:3000/properties/2
+GET http://localhost:3000/properties/1
 
 ### Create property #2
 POST http://localhost:3000/properties
@@ -28,3 +28,30 @@ Content-Type: application/json
   "monthly_rent": 1800,
   "bedrooms": 1
 }
+
+### Update property #1
+PUT http://localhost:3000/properties/1
+Content-Type: application/json
+
+{
+  "title": "Updated Lakeside Cottage",
+  "city": "Austin",
+  "monthly_rent": 2400,
+  "bedrooms": 3,
+  "is_available": false
+}
+
+### Update property that does not exist
+PUT http://localhost:3000/properties/999
+Content-Type: application/json
+
+{
+  "title": "Missing Property",
+  "city": "Nowhere"
+}
+
+### Delete property #1
+DELETE http://localhost:3000/properties/1
+
+### Delete property that does not exist
+DELETE http://localhost:3000/properties/999
