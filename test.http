@@ -5,7 +5,7 @@ GET http://localhost:3000/
 GET http://localhost:3000/properties
 
 ### Test: Get property by id (will be 404 since empty)
-GET http://localhost:3000/properties/1
+GET http://localhost:3000/properties/999
 
 ### Create property #2
 POST http://localhost:3000/properties
