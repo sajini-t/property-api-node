@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/sajini-t/property-api-node#readme",
   "dependencies": {
+    "better-sqlite3": "^12.10.0",
     "express": "^5.2.1"
   }
 }

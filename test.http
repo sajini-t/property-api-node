@@ -5,7 +5,7 @@ GET http://localhost:3000/
 GET http://localhost:3000/properties
 
 ### Test: Get property by id (will be 404 since empty)
-GET http://localhost:3000/properties/999
+GET http://localhost:3000/properties/4
 
 ### Create property #2
 POST http://localhost:3000/properties
@@ -30,7 +30,7 @@ Content-Type: application/json
 }
 
 ### Update property #1
-PUT http://localhost:3000/properties/1
+PATCH http://localhost:3000/properties/2
 Content-Type: application/json
 
 {
@@ -42,7 +42,7 @@ Content-Type: application/json
 }
 
 ### Update property that does not exist
-PUT http://localhost:3000/properties/999
+PATCH http://localhost:3000/properties/999
 Content-Type: application/json
 
 {
@@ -51,7 +51,7 @@ Content-Type: application/json
 }
 
 ### Delete property #1
-DELETE http://localhost:3000/properties/1
+DELETE http://localhost:3000/properties/4
 
 ### Delete property that does not exist
 DELETE http://localhost:3000/properties/999
