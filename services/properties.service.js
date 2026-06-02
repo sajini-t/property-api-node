@@ -3,8 +3,9 @@
 
 const db = require('../db/database.js');
 
-function findAll() {
-    const rows = db.prepare('Select * From properties').all();
+function findAll({page = 1, limit = 10} = {}) {
+    const offset = (page - 1) * limit;
+    const rows = db.prepare('Select * From properties Limit ? Offset ?').all(limit, offset);
     return rows.map(rowToProperty);
 }
 

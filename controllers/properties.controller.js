@@ -4,7 +4,9 @@
 const propertiesService = require('../services/properties.service.js');
 
 function getAll(req, res) {
-    const properties = propertiesService.findAll();
+    const page = parseInt(req.query.page) || 1;
+    const limit = Math.min(parseInt(req.query.limit) || 10, 100);
+    const properties = propertiesService.findAll({page, limit});
     res.status(200).json(properties);
 }
 

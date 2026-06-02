@@ -55,3 +55,22 @@ DELETE http://localhost:3000/properties/4
 
 ### Delete property that does not exist
 DELETE http://localhost:3000/properties/999
+
+
+### Test: GET /properties (no params, default page=1 limit=10)
+GET http://localhost:3000/properties
+
+### Test: GET /properties?page=1&limit=2
+GET http://localhost:3000/properties?page=1&limit=1
+
+### Test: GET /properties?page=2&limit=2
+GET http://localhost:3000/properties?page=2&limit=2
+
+### Test: GET /properties?limit=100 (within cap)
+GET http://localhost:3000/properties?limit=100
+
+### Test: GET /properties?limit=99999 (should be capped at 100)
+GET http://localhost:3000/properties?limit=99999
+
+### Test: GET /properties?page=abc (invalid, should fall back to 1)
+GET http://localhost:3000/properties?page=abc
